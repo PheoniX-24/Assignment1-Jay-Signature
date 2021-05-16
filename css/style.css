@@ -1,0 +1,847 @@
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: "Lato",sans-serif;
+    font-weight:400;
+    font-size:16px;
+    line-height:1.7;
+    color:black;
+    padding-left:30px;
+    padding-right:30px;
+}
+
+.navbar {
+    background-color: white;
+    position:fixed;
+    width:94.35vw;
+    height:80px;
+    z-index:10;
+    border-bottom: inset;
+    font-weight:500;
+}
+
+.nav-right-margin {
+    margin-right: 1.3vw;
+}
+
+.nav-ul{
+    list-style-type: none;
+    margin: 10;
+    padding: 0;
+    overflow: auto;
+}
+
+#header {
+    height:95vh;
+    padding-top:80px;
+    backface-visibility: hidden;
+}
+
+.header-flex-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: stretch;
+    margin-bottom: 20vh;
+} 
+
+/* Responsive layout - makes a one column layout instead of a two-column layout 
+@media (max-width: 800px) {
+    .header-flex-container {
+      flex-direction: column;
+    }
+  }*/
+
+  .left {
+    width: 75vw;
+    height:95vh;
+    background-color:rgba(255, 255, 0, 0.24);
+    clip-path:polygon(0 0,100% 0, 100% 80%, 50% 100%,0 80%);
+    position:relative;
+  }
+
+  .right {
+      width:125vw;
+      height:95vh;
+      background-image:linear-gradient(to right,rgba(0, 0, 0, 0.753),rgba(0, 0, 0, 0.753)), url(../images/resto1.jpg);
+      background-size: cover;
+      background-position:top;
+      position:relative;
+      
+  }
+
+  .logobox {
+      position:absolute;
+      top:43%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      z-index:2;
+      color:rgb(175, 150, 4);
+      font-weight:500;
+  }
+
+  .logo {
+      height:250px;
+  }
+
+  .logo-nav {
+      height:80px;
+  }
+
+  .intro {
+      width:15vw;
+      float:left;
+  }
+
+  .other {
+      float:right;
+      
+      
+  }
+  .nav{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .navbtn:link, .navbtn:visited {
+      display:inline-block;
+      text-decoration: none;
+      padding: 3.3vh 4vw;
+      transition:all 0.2s;
+      color: black;
+  }
+
+  .navbtn:hover {
+      background-color: rgba(255, 217, 0, 0.10);
+      border-bottom: 2px solid gold;
+      transform: translateY(-2px);
+      transform: scale(1.2);
+  }
+
+  .navbtn:active {
+      transform: translateY(0px);
+  }
+
+  .covertext-1 {
+      text-align:center;
+      Font-size:35px;
+      font-family: 'Great Vibes', cursive;
+  }
+
+  .covertext-2 {
+      text-align:center;
+      Font-size:13px;
+  }
+
+  .about-title {
+      margin-top:-20px;
+      text-align:center;
+      Font-size:40px;
+      font-family: 'Kaushan Script', cursive;
+      
+  }
+
+  .about-text {
+    text-align:center;
+    Font-size:13px;
+
+  }
+
+  .about-gap {
+      margin-top:60px;
+  }
+
+  .about-text2 {
+    text-align:center;
+    Font-size:21px;
+    font-weight: 550;
+    font-family: 'Great Vibes', cursive;
+  }
+
+  .sp-btn:link,
+  .sp-btn:visited {
+      display:inline-block;
+      text-decoration:none;
+      color:gold;
+      padding:15px 20px;
+      background-color:rgb(0, 0, 0);
+      margin-top:30px;
+      margin-left:125px;
+      text-align:center;
+      border-radius: 100px;
+      transition:all 0.2s;
+  }
+
+  .sp-btn:hover {
+      transform:translateY(-3px);
+      box-shadow:0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .sp-btn:active{
+      transform:translateY(-1px);
+      box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  #specialities{
+      background-color:rgba(255, 255, 0, 0.24);
+      margin:0;
+      margin-top: 12vh;
+      padding:0;
+      padding-bottom: 7vh;
+  }
+
+  .sp-title {
+    background-image:linear-gradient(to right,rgba(0, 0, 0, 0.753),rgba(0, 0, 0, 0.753)), url(../images/cover-sp.jpg);
+    background-size: cover;
+    background-position:bottom;
+    color:gold;
+    padding:1rem 2rem;
+    margin-bottom: 1.6vw;
+    height:30vh;
+  }
+
+  .sp-titlename {
+      text-align:left;
+      Font-size:4.5rem;
+      font-family: 'Great Vibes', cursive;
+      font-weight: 500;
+  }
+
+  .sp-subtitle {
+      text-align:left;
+      font-family: 'Mandali', sans-serif;
+      font-size:1.3rem;
+  }
+
+  .sp-flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    height:50vh;
+    align-content: stretch;
+    justify-content:center;
+    align-items:flex-start;
+    align-content: space-between;
+} 
+
+.sp-flex-items {
+    display: block;
+    height:45vh;
+    width:18vw;
+    margin: 1.6vw;
+    border:1px outset grey;
+    background-color: white;
+    transition:all 0.75s;
+    border-radius: 10px;
+}
+
+.sp-flex-items:hover {
+    transition:all 0.75s;
+    animation: rot 0.75s ease-out 0s 1 none;
+    transform:scale(1.25);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes rot {
+    0%  {transform: rotateY(0deg) scale(1); box-shadow: 0 0px 0px rgba(0, 0, 0, 0.6);}
+    50% {transform: rotateY(180deg) scale(1.125); background-image:linear-gradient(to right,rgba(0, 0, 0, 0.753),rgba(0, 0, 0, 0.753)), url(../images/cards-back.jpg); box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.6);}
+    100%{transform: rotateY(360deg) scale(1.25); background-color: white; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);}
+}
+
+.card-image {
+    height:22.5vh;
+    width:17.9vw;
+    border-radius: 10px;;
+}
+
+.card-name {
+    font-family: 'Mandali', sans-serif;
+    text-align: left;
+    font-weight: 600;
+    font-size: 15px;
+    margin-left:5px;
+}
+
+.card-des {
+    font-family: 'Mandali', sans-serif;
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+    color: grey;
+    height:12vh;
+    margin-left:5px;
+}
+
+/*.recipe{
+    font-family: 'Mandali', sans-serif;
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+    color: grey;
+    height:8vh;
+    margin-left:5px;
+    margin-top: -8vh;
+    opacity: 0;
+}*/
+
+.card-vegtype {
+    margin-left:5px;
+    float:left;
+    height:20px;
+    width:20px;
+}
+
+.dis-price {
+    float:right;
+    color:red;
+    font-size:18px;
+}
+
+.og-price{
+    float:right;
+    color:grey;
+    font-size:12px;
+    margin-top: 6px;
+}
+
+.discount {
+    float:right;
+    color:black;
+    font-size:12px;
+     margin-top: 6px;
+     margin-right: 5px;
+}
+
+.addbtn {
+      float: right;
+      text-decoration:none;
+      color:white;
+      padding:5px 10px;
+      background-color:green;
+      text-align:center;
+      border:1px solid green;
+      border-radius: 100px;
+      margin-right: 5px;
+      cursor:pointer;
+      font-size: 16px;
+}
+
+.addbtn .span-addbtn {
+    position:relative;
+    display:inline-block;
+    transition: 0.5s;
+}
+
+.addbtn .span-addbtn:after {
+    content: '\002B';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.addbtn:hover .span-addbtn{
+    /*background-color:white;
+    color:green;*/
+    padding-right:5px;
+}
+
+.addbtn:hover .span-addbtn:after {
+    opacity: 1;
+    right: 0;
+}
+
+.addbtn:focus{
+    opacity:0;
+}
+
+.added {
+      float: right;
+      text-decoration:none;
+      color:green;
+      padding:0.5px 4px;
+      background-color:none;
+      text-align:center;
+      border:1px solid green;
+      border-radius: 100px;
+      margin-right: -55px;
+      font-size: 16px;
+      z-index: -1;
+      cursor:pointer;
+}
+
+/*.knowmore {
+    color: grey;
+    font-family: 'Mandali', sans-serif;
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+    margin:0;
+    padding:0;
+    display:inline;
+    background-color:transparent;
+    border:none;
+    opacity:0;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.sp-flex-items:hover .knowmore {   
+    opacity:1;
+}
+
+.knowmore:hover {
+    transform: scale(1.1);
+    opacity: 0;
+}
+.knowmore:hover .recipe:after{
+    opacity:1;
+}
+.knowmore:hover .card-des:after{
+    opacity:0;
+}*/
+
+
+
+#recommendation{
+    background-color:rgba(255, 255, 0, 0.24);
+    margin:0;
+    padding:0;
+    padding-bottom: 7vh;
+}
+
+.r-title {
+  background-image:linear-gradient(to right,rgba(0, 0, 0, 0.753),rgba(0, 0, 0, 0.753)), url(../images/cover-r.jpg);
+  background-size: cover;
+  background-position:center left;
+  color:gold;
+  padding:1rem 2rem;
+  margin-bottom: 1.6vw;
+  height:30vh;
+}
+
+.r-titlename {
+    text-align:left;
+    Font-size:4.5rem;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 500;
+}
+
+.r-subtitle {
+    text-align:left;
+    font-family: 'Mandali', sans-serif;
+    font-size:1.3rem;
+}
+
+.r-flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  height:160vh;
+  justify-content:center;
+  align-items:flex-start;
+  align-content: space-between;
+} 
+
+.search-box {
+    align-content: center;
+    margin-bottom: 1.6vw;
+    position:relative;
+    text-align: center;
+}
+
+.search-bar{
+    width:35vw;
+    height:4vh;
+    padding:0 5px;
+    border-radius: 3px;
+    border:1px solid grey;
+    box-shadow: 3px 3px 10px grey;
+}
+
+.search {
+    position:absolute;
+    align-content: center;
+    padding:0px 3px;
+    border-radius: 3px;
+    border:2px outset rgb(173, 173, 173);
+    height:4.5vh;
+    box-shadow: 3px 3px 10px grey;
+}
+
+.search:focus {
+    animation: btn-cont 0.1s ease-out 0s 1 none;
+}
+
+@keyframes btn-cont{
+    0%  {transform: scale(1); box-shadow: 3px 3px 10px grey;}
+    100%{transform: scale(0.85); box-shadow:none;}
+}
+
+.search-bar:hover {
+    animation: searchbar-ani 0.5s ease-in-out 0s 1 none;
+    transform: scale(1.1) translateX(-1.5vw);
+    box-shadow: 3px 3px 10px blue;
+}
+
+@keyframes searchbar-ani {
+    0%   {transform: scale(1) translateX(0);box-shadow: 3px 3px 10px gray;}
+    50%  {transform: scale(1.05) translateX(-0.75vw);box-shadow: 3px 3px 10px green;}
+    100% {transform: scale(1.1) translateX(-1.5vw);box-shadow: 3px 3px 10px blue;}
+}
+
+#reviews {
+    margin-bottom: 5rem;
+}
+
+.revfeed-flex-container {
+    margin-top: 4rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: stretch;
+} 
+
+.rev {
+    width:50vw;
+}
+
+.rev-sep-img {
+    margin-top: 15vh;
+    height:60vh;
+    width:3vw;
+    background-position: center;
+}
+
+.rev-header {
+    color: black;
+    text-align:left;
+    Font-size:2rem;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 500;
+    margin-left: 0rem;
+}
+
+.rev-flex-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: stretch;
+}
+
+.rev-comm {
+    background-color:rgba(255, 166, 0, 0.4);
+    width:40vw;
+    height: 5.1rem;
+    margin-top: 4rem;
+    margin-left: 3rem;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px grey;
+}
+
+.rev-comm-img {
+    width:5rem;
+    border-radius: 100px;
+    margin-left: -2.5rem;
+    margin-top: -2.5rem;
+    box-shadow: 5px 5px 10px grey;
+}
+
+.rev-comm:hover {
+    transform: translateX(2rem);
+}
+
+.comm-name {
+    font-family: 'Mandali', sans-serif;
+    font-weight: 600;
+    margin-top: -3rem;
+    margin-left: 3rem;
+}
+
+.comm-comm {
+    font-family: 'Mandali', sans-serif;
+    font-weight: 400;
+    font-size: 14px ;
+    color: grey;
+    margin-left: 3rem;
+    padding-right: 0.5rem;
+    line-height: 1rem;
+}
+
+.feed{
+    width:41.5vw;
+}
+
+.feed-header {
+    color: black;
+    text-align:right;
+    Font-size:2rem;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 500;
+    margin-right: 1rem;
+}
+
+.feedback{
+    border: 1px solid grey;
+    box-shadow: 5px 5px 10px rgba(255, 166, 0, 0.4);
+    border-radius: 2rem;
+    font-family: 'Mandali', sans-serif;
+    width:35vw;
+    margin-left: 4.6rem;
+    margin-top: 3.5rem;
+    padding: 1rem 2rem;
+}
+
+.textbox {
+    width: 21vw;
+    height: 1.5rem;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.textbox:focus{
+    box-shadow: 2.5px 2.5px 5px black;
+}
+
+.feed-btn {
+    display: inline-block;
+    background-color: white;
+    color: grey;
+    border:1px solid grey;
+    border-radius: 0.3rem;
+    height:2rem;
+    width:9.5rem;
+    margin-right: 0.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Mandali', sans-serif;
+}
+
+.feed-good:hover{
+    background-color: green;
+    color:white;
+    box-shadow: 2.5px 2.5px 5px black;
+}
+
+.feed-good:focus {
+    background-color: green;
+    color:white;
+}
+
+.feed-bad:hover{
+    background-color: red;
+    color:white;
+    box-shadow: 2.5px 2.5px 5px black;
+}
+
+.feed-bad:focus {
+    background-color: red;
+    color:white;
+}
+
+#feed-textarea {
+    font-family: 'Mandali', sans-serif;
+    margin-top: 0.5rem;
+    border-radius: 0.2rem;
+    width:30vw;
+    height:18vh;
+    padding:0.1rem 0.4rem;
+}
+
+#feed-textarea:focus {
+    box-shadow: 2.5px 2.5px 5px black;
+}
+
+.feed-submit {
+    display: inline-block;
+    font-family: 'Mandali', sans-serif;
+    background-color:  grey;
+    color: white;
+    border:1px solid grey;
+    border-radius: 0.3rem;
+    height:2rem;
+    width:7rem;
+    margin-top: 1rem;
+    margin-left: 21.5vw;
+}
+
+.feed-submit:hover {
+    background-color:  rgba(255, 166, 0, 0.4);
+    color:black;
+    box-shadow: 2.5px 2.5px 5px black;
+}
+
+.feed-submit:focus {
+    background-color:  rgba(255, 166, 0, 0.4);
+    color:black;
+    box-shadow: 2.5px 2.5px 5px black;
+    animation: btn-expd 1s ease-out 0s 1 none;
+}
+
+@keyframes btn-expd {
+    0%  {opacity: 1;transform: scale(1);}
+    100%{opacity: 0;transform: scale(1.5);}
+}
+
+.f-flex-container{
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: stretch;
+    background-color: rgb(40, 40, 40);
+    padding-bottom: 1rem;
+}
+
+.footc {
+    padding-bottom: 3rem;
+    position: relative;
+}
+
+.f-logo {
+    width: 20rem;
+    background-color: rgb(20, 20, 20);
+}
+
+.f-btp:link, .f-btp:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(218, 185, 0);
+    border: 1px ridge rgb(218, 185, 0);
+    padding: 0.2rem 6.6rem;
+    background-color: rgb(30, 30, 30);
+    font-family: 'Mandali', sans-serif;
+    font-weight: 800;
+}
+
+.f-btp:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 5px 5px 10px black;
+    background-color:  rgb(218, 185, 0);
+    color:white;
+}
+
+.f-ss {
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.ss-btn:link, .ss-btn:visited {
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(30, 30, 30);
+    border-radius: 100rem;
+    width:2rem;
+    height:2rem;
+    position: relative;
+}
+
+.ss-icon {
+    position: absolute;;
+    width:1rem;
+    height:1rem;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.ss-btn:hover{
+    animation: ss-rot 0.75s ease-out 0s 1 none;
+}
+
+@keyframes ss-rot{
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.footl {
+    width: 35.5vw;
+    position: relative;
+}
+
+.foo-text {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.foot-tit {
+    margin-top: 4rem;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 30px;
+    font-weight: 500;
+    color:white;
+    margin-bottom:1.5rem;
+}
+
+.foot-add {
+    text-align: center;
+    font-family: 'Mandali', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color:grey;
+}
+
+.f-map:link, .f-map:visited {
+    position: absolute;
+    font-family: 'Mandali', sans-serif;
+    font-weight: 800;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(218, 185, 0);
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.f-map:hover {
+    color: white;
+}
+
+.footr {
+    width:35.5vw;
+    position: relative;
+}
+
+.foot-info {
+    font-family: 'Mandali', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color:grey;
+    text-align: center;
+}
+
+.foot-links:link, .foot-links:visited {
+    position: absolute;
+    font-family: 'Mandali', sans-serif;
+    font-weight: 800;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(218, 185, 0);
+}
+
+.foot-links:hover {
+    color: white;
+}
+
+.femph{
+    margin-left: -10rem;
+}
+
+.ftcpp {
+    margin-top: 1.5rem;
+}
+
+.ftc {
+    margin-left:-10.8rem;
+}
+
+.fpp {
+    margin-left: 0.6rem;
+}
