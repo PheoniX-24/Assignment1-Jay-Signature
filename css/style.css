@@ -70,7 +70,7 @@ body {
   .right {
       width:125vw;
       height:95vh;
-      background-image:linear-gradient(to right,rgba(0, 0, 0, 0.753),rgba(0, 0, 0, 0.753)), url(../images/resto1.jpg);
+      background-image:linear-gradient(to right,rgba(0, 0, 0, 0.753),rgba(0, 0, 0, 0.753)), url(../Images/resto1.jpg);
       background-size: cover;
       background-position:top;
       position:relative;
@@ -199,7 +199,7 @@ body {
   }
 
   .sp-title {
-    background-image:linear-gradient(to right,rgba(0, 0, 0, 0.753),rgba(0, 0, 0, 0.753)), url(../images/cover-sp.jpg);
+    background-image:linear-gradient(to right,rgba(0, 0, 0, 0.753),rgba(0, 0, 0, 0.753)), url(../Images/cover-sp.jpg);
     background-size: cover;
     background-position:bottom;
     color:gold;
@@ -251,7 +251,7 @@ body {
 
 @keyframes rot {
     0%  {transform: rotateY(0deg) scale(1); box-shadow: 0 0px 0px rgba(0, 0, 0, 0.6);}
-    50% {transform: rotateY(180deg) scale(1.125); background-image:linear-gradient(to right,rgba(0, 0, 0, 0.753),rgba(0, 0, 0, 0.753)), url(../images/cards-back.jpg); box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.6);}
+    50% {transform: rotateY(180deg) scale(1.125); background-image:linear-gradient(to right,rgba(0, 0, 0, 0.753),rgba(0, 0, 0, 0.753)), url(../Images/cards-back.jpg); box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.6);}
     100%{transform: rotateY(360deg) scale(1.25); background-color: white; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);}
 }
 
@@ -419,7 +419,7 @@ body {
 }
 
 .r-title {
-  background-image:linear-gradient(to right,rgba(0, 0, 0, 0.753),rgba(0, 0, 0, 0.753)), url(../images/cover-r.jpg);
+  background-image:linear-gradient(to right,rgba(0, 0, 0, 0.753),rgba(0, 0, 0, 0.753)), url(../Images/cover-r.jpg);
   background-size: cover;
   background-position:center left;
   color:gold;
